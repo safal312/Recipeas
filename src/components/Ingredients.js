@@ -9,10 +9,10 @@ export const Ingredients = ({meal}) => {
         let ingredientCount = "strIngredient" + (i + 1);
         let measureCount = "strMeasure" + (i + 1);
 
-        if(meal[ingredientCount]) element['ingredient'] = meal[ingredientCount];
-        if(meal[measureCount]) element['measure'] = meal[measureCount]; 
+        if(meal[ingredientCount] != "") element['ingredient'] = meal[ingredientCount];
+        if(meal[measureCount] != "") element['measure'] = meal[measureCount]; 
         
-        if(meal[ingredientCount] || meal[measureCount]) measures.push(element);
+        if(meal[ingredientCount] != "" || meal[measureCount] != "") measures.push(element);
     }
 
     return (
